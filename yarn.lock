@@ -643,7 +643,7 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
-"@serenity-js/assertions@3.0.0-rc.13", "@serenity-js/assertions@^3.0.0-rc":
+"@serenity-js/assertions@3.0.0-rc.13", "@serenity-js/assertions@^3.0.0-rc.11":
   version "3.0.0-rc.13"
   resolved "https://registry.yarnpkg.com/@serenity-js/assertions/-/assertions-3.0.0-rc.13.tgz#e3f5f58ffc4c81fdf6a5e4b227711c75be36bc03"
   integrity sha512-iPzzePZzEzq56Rv2sIUCgT3BsE76PP4zUqbeNFJFWBwr6vocj/zn3owE0wP8Q+6myvRunQ90Ces8xmncx7PyFA==
@@ -651,7 +651,7 @@
     "@serenity-js/core" "3.0.0-rc.13"
     tiny-types "^1.17.0"
 
-"@serenity-js/console-reporter@^3.0.0-rc":
+"@serenity-js/console-reporter@^3.0.0-rc.11":
   version "3.0.0-rc.13"
   resolved "https://registry.yarnpkg.com/@serenity-js/console-reporter/-/console-reporter-3.0.0-rc.13.tgz#dcecfef93ead537a9eb22c8b2f6c3ac88fecef85"
   integrity sha512-LpGKNr55/j5FL2u94od6dSr1i9Yt6ilLUp/hu0GRzIHpsdY+/Kt2gNJddG+LkgZLed1RJ9p9+dTlVgJ3c/l7Pw==
@@ -677,14 +677,14 @@
     tiny-types "^1.17.0"
     upath "^2.0.1"
 
-"@serenity-js/mocha@^3.0.0-rc":
+"@serenity-js/mocha@^3.0.0-rc.11":
   version "3.0.0-rc.13"
   resolved "https://registry.yarnpkg.com/@serenity-js/mocha/-/mocha-3.0.0-rc.13.tgz#70a1b9cbb347eeb5ef10cc4c71712d34fab66aaa"
   integrity sha512-Ew37OlMX80xIxjyusj+QhR5D4DsqYcG9L73ctiDIU/bjznqVxwVQAbwNWMo9TkvsJOm+rM7QzckZeK7EZm1KPQ==
   dependencies:
     "@serenity-js/core" "3.0.0-rc.13"
 
-"@serenity-js/web@3.0.0-rc.13", "@serenity-js/web@^3.0.0-rc":
+"@serenity-js/web@3.0.0-rc.13", "@serenity-js/web@^3.0.0-rc.11":
   version "3.0.0-rc.13"
   resolved "https://registry.yarnpkg.com/@serenity-js/web/-/web-3.0.0-rc.13.tgz#6936e978c532a2b4467f36f1852b9f9240c763ec"
   integrity sha512-V65NG/B0AEJvahV+5Dggz1x/BbMIrSIw7kuDGg4XmmLKM7EC6qZwtI1xDun6Ur61Zf5A/lERU3JV5YdSs4E0AQ==
@@ -693,7 +693,7 @@
     "@serenity-js/core" "3.0.0-rc.13"
     tiny-types "^1.17.0"
 
-"@serenity-js/webdriverio@^3.0.0-rc":
+"@serenity-js/webdriverio@^3.0.0-rc.11":
   version "3.0.0-rc.13"
   resolved "https://registry.yarnpkg.com/@serenity-js/webdriverio/-/webdriverio-3.0.0-rc.13.tgz#3955df6e68a6111984d6c5e7d4741ed7c1e7839b"
   integrity sha512-xQVT5O+aHLDebXvx1h5pV1BnZCK8Wa190zb0tBoN0WdqeJLbgy8DYXTxp2J7RYInjNRuaWJNT6GOE7fzA5vOfA==
