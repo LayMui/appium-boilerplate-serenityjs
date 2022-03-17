@@ -41,10 +41,12 @@
     },
     "homepage": "https://github.com/webdriverio/appium-boilerplate#readme",
     "devDependencies": {
+        "@cucumber/cucumber": "^7.3.2",
         "@serenity-js/assertions": "^3.0.0-rc.11",
         "@serenity-js/console-reporter": "^3.0.0-rc.11",
         "@serenity-js/core": "^3.0.0-rc",
         "@serenity-js/mocha": "^3.0.0-rc.11",
+        "@serenity-js/cucumber": "^3.0.0-rc.11",
         "@serenity-js/serenity-bdd": "^3.0.0-rc.11",
         "@serenity-js/web": "^3.0.0-rc.11",
         "@serenity-js/webdriverio": "^3.0.0-rc.11",

@@ -17,7 +17,7 @@ export const config: WebdriverIOConfig = {
     // ====================
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
- //   runner: "local",
+    //   runner: "local",
     //
     // ==================
     // Specify Test Files
@@ -31,28 +31,6 @@ export const config: WebdriverIOConfig = {
     /**
      * NOTE: This is just a place holder and will be overwritten by each specific configuration
      */
-    framework: "@serenity-js/webdriverio",
-
-    serenity: {
-        // Use custom Actors class
-        // see: https://serenity-js.org/modules/core/class/src/stage/Cast.ts~Cast.html
-        actors: new Actors(),
-
-        // Use Cucumber.js test runner adapter
-        // see: https://serenity-js.org/modules/cucumber/
-        runner: "cucumber",
-
-        // Configure reporting services
-        // see: https://serenity-js.org/handbook/reporting/
-        crew: [
-            ArtifactArchiver.storingArtifactsAt("./target/site/serenity"),
-            Photographer.whoWill(TakePhotosOfInteractions), // slower execution, more comprehensive reports
-            // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
-            ConsoleReporter.forDarkTerminals(),
-            new SerenityBDDReporter(),
-        ],
-    },
-
     specs: [],
     //
     // ============
@@ -131,6 +109,8 @@ export const config: WebdriverIOConfig = {
 
     serenity: {
         actors: new Actors(),
+      //  runner: "cucumber",    // ios.app] [0-0] error: unknown option '--no-backtrace'
+
         crew: [
             ArtifactArchiver.storingArtifactsAt("./target/site/serenity"),
             // Photographer.whoWill(TakePhotosOfInteractions),     // slower execution, more comprehensive reports
@@ -154,13 +134,41 @@ export const config: WebdriverIOConfig = {
     // see also: https://webdriver.io/docs/dot-reporter
     reporters: ["spec"],
     // Options to be passed to Mocha.
-    mochaOpts: {
-        ui: "bdd",
-        /**
-         * NOTE: This has been increased for more stable Appium Native app
-         * tests because they can take a bit longer.
-         */
-        timeout: 3 * 60 * 1000, // 3min
+    // mochaOpts: {
+    //     ui: "bdd",
+    //     /**
+    //      * NOTE: This has been increased for more stable Appium Native app
+    //      * tests because they can take a bit longer.
+    //      */
+    //     timeout: 3 * 60 * 1000, // 3min
+    // },
+    cucumberOpts: {
+        // <string[]> (file/dir) require files before executing features
+        require: ["./tests/src/**/*.ts"],
+        // <boolean> show full backtrace for errors
+        backtrace: false,
+        // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+        requireModule: [],
+        // <boolean> invoke formatters without executing steps
+        dryRun: false,
+        // <boolean> abort the run on first failure
+        failFast: false,
+        // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
+        format: ["pretty"],
+        // <boolean> hide step definition snippets for pending steps
+        snippets: true,
+        // <boolean> hide source uris
+        source: true,
+        // <string[]> (name) specify the profile to use
+        profile: [],
+        // <boolean> fail if there are any undefined or pending steps
+        strict: false,
+        // <string> (expression) only execute the features or scenarios with tags matching the expression
+        tagExpression: "@test",
+        // <number> timeout for step definitions
+        timeout: 60000,
+        // <boolean> Enable this config to treat undefined definitions as warnings.
+        ignoreUndefinedDefinitions: false,
     },
     //
     // =====
