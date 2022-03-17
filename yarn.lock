@@ -127,7 +127,7 @@
     commander "9.0.0"
     source-map-support "0.5.21"
 
-"@cucumber/gherkin@22.0.0", "@cucumber/gherkin@^22.0.0":
+"@cucumber/gherkin@22.0.0", "@cucumber/gherkin@^22.0.0", "@cucumber/gherkin@~22.0.0":
   version "22.0.0"
   resolved "https://registry.yarnpkg.com/@cucumber/gherkin/-/gherkin-22.0.0.tgz#93b271fd116e2164c33adc5ccd9257bba74f03a7"
   integrity sha512-D5OghXE8kkZm7pcwo8TvQMgrrXGMXEjERdKLU0T7dQIbc6k0BmMX8dTRh2cwAjH8c7vhwdd0qLU8FPQgGGj+bg==
@@ -1385,7 +1385,7 @@
     loglevel-plugin-prefix "^0.8.4"
     strip-ansi "^6.0.0"
 
-"@wdio/logger@7.16.0":
+"@wdio/logger@7.16.0", "@wdio/logger@~7.16.0":
   version "7.16.0"
   resolved "https://registry.npmjs.org/@wdio/logger/-/logger-7.16.0.tgz"
   integrity sha512-/6lOGb2Iow5eSsy7RJOl1kCwsP4eMlG+/QKro5zUJsuyNJSQXf2ejhpkzyKWLgQbHu83WX6cM1014AZuLkzoQg==
@@ -1481,7 +1481,7 @@
     object-inspect "^1.10.3"
     supports-color "8.1.1"
 
-"@wdio/reporter@^7.16.14":
+"@wdio/reporter@^7.16.14", "@wdio/reporter@~7.16.13":
   version "7.16.14"
   resolved "https://registry.npmjs.org/@wdio/reporter/-/reporter-7.16.14.tgz"
   integrity sha512-e/I2oGfqjx9+zI4NT/garqxm7Afnos1EcrGSNu75WmP3PNJt4i+9DKkROu4PM6XWcpUB4v2UF7Mv/NrL3TU9aA==
@@ -4340,6 +4340,15 @@ fs-extra@^9.0.1:
   integrity sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==
   dependencies:
     at-least-node "^1.0.0"
+    graceful-fs "^4.2.0"
+    jsonfile "^6.0.1"
+    universalify "^2.0.0"
+
+fs-extra@~10.0.0:
+  version "10.0.1"
+  resolved "https://registry.yarnpkg.com/fs-extra/-/fs-extra-10.0.1.tgz#27de43b4320e833f6867cc044bfce29fdf0ef3b8"
+  integrity sha512-NbdoVMZso2Lsrn/QwLXOy6rm0ufY2zEOKCDzJR/0kBsb0E6qed0P3iYK+Ath3BfvXEeu4JhEtXLgILx5psUfag==
+  dependencies:
     graceful-fs "^4.2.0"
     jsonfile "^6.0.1"
     universalify "^2.0.0"
@@ -7961,6 +7970,18 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
+wdio-cucumberjs-json-reporter@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/wdio-cucumberjs-json-reporter/-/wdio-cucumberjs-json-reporter-4.4.0.tgz#147a45acca1e4e174a564025821555cb14d24c46"
+  integrity sha512-9E6YwZKuLd8pNciA7VsmwI9IxT1KN7TlxmB4VAXLXQqsdLOavq2CbcGktZqUZSWsv2Hj6qZU1AWDENrnUmi9HA==
+  dependencies:
+    "@cucumber/gherkin" "~22.0.0"
+    "@wdio/logger" "~7.16.0"
+    "@wdio/reporter" "~7.16.13"
+    fs-extra "~10.0.0"
+    strip-ansi "^6.0.1"
+    webdriverio "~7.16.13"
+
 webdriver@5.23.0:
   version "5.23.0"
   resolved "https://registry.npmjs.org/webdriver/-/webdriver-5.23.0.tgz"
@@ -8016,7 +8037,7 @@ webdriver@7.16.3:
     ky "^0.28.5"
     lodash.merge "^4.6.1"
 
-webdriverio@7.16.16:
+webdriverio@7.16.16, webdriverio@~7.16.13:
   version "7.16.16"
   resolved "https://registry.npmjs.org/webdriverio/-/webdriverio-7.16.16.tgz"
   integrity sha512-caPaEWyuD3Qoa7YkW4xCCQA4v9Pa9wmhFGPvNZh3ERtjMCNi8L/XXOdkekWNZmFh3tY0kFguBj7+fAwSY7HAGw==

@@ -1,6 +1,8 @@
 import { ConsoleReporter } from '@serenity-js/console-reporter';
 import { ArtifactArchiver } from '@serenity-js/core';
 import { WebdriverIOConfig } from '@serenity-js/webdriverio';
+import { Photographer, TakePhotosOfInteractions } from "@serenity-js/web";
+import { SerenityBDDReporter } from "@serenity-js/serenity-bdd";
 import { Actors } from './screenplay';
 
 /**
@@ -15,7 +17,7 @@ export const config: WebdriverIOConfig = {
     // ====================
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
-    runner: "local",
+ //   runner: "local",
     //
     // ==================
     // Specify Test Files
@@ -29,6 +31,28 @@ export const config: WebdriverIOConfig = {
     /**
      * NOTE: This is just a place holder and will be overwritten by each specific configuration
      */
+    framework: "@serenity-js/webdriverio",
+
+    serenity: {
+        // Use custom Actors class
+        // see: https://serenity-js.org/modules/core/class/src/stage/Cast.ts~Cast.html
+        actors: new Actors(),
+
+        // Use Cucumber.js test runner adapter
+        // see: https://serenity-js.org/modules/cucumber/
+        runner: "cucumber",
+
+        // Configure reporting services
+        // see: https://serenity-js.org/handbook/reporting/
+        crew: [
+            ArtifactArchiver.storingArtifactsAt("./target/site/serenity"),
+            Photographer.whoWill(TakePhotosOfInteractions), // slower execution, more comprehensive reports
+            // Photographer.whoWill(TakePhotosOfFailures),      // fast execution, screenshots only when tests fail
+            ConsoleReporter.forDarkTerminals(),
+            new SerenityBDDReporter(),
+        ],
+    },
+
     specs: [],
     //
     // ============
@@ -128,7 +152,7 @@ export const config: WebdriverIOConfig = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter
-    reporters: ['spec'],
+    reporters: ["spec"],
     // Options to be passed to Mocha.
     mochaOpts: {
         ui: "bdd",
