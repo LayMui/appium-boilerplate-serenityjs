@@ -109,7 +109,8 @@ export const config: WebdriverIOConfig = {
 
     serenity: {
         actors: new Actors(),
-      //  runner: "cucumber",    // ios.app] [0-0] error: unknown option '--no-backtrace'
+       // runner: "cucumber",    // ios.app] [0-0] error: unknown option '--no-backtrace'
+
 
         crew: [
             ArtifactArchiver.storingArtifactsAt("./target/site/serenity"),
@@ -183,4 +184,5 @@ export const config: WebdriverIOConfig = {
      * NOTE: No Hooks are used in this project, but feel free to add them if you need them.
      */
 };
+
 
